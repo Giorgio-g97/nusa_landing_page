@@ -1,19 +1,71 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { LucideMenu } from "lucide-react";
 
 const Navbar = () => {
   return (
     <div className="fixed w-full top-0 left-0">
-      <ul className="bg-white flex gap-3 justify-around items-center my-3 border w-72 md:w-96 mx-auto border-black rounded-3xl px-2">
+      <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-72 mx-auto border-black rounded-3xl px-2">
+        <Sheet>
+          <div className="flex justify-between w-full mx-[20px]">
+            <Link href="/">
+              <Image src="/Logo.png" alt="logo" width={60} height={60} />
+            </Link>
+            <SheetTrigger>
+              <LucideMenu />
+            </SheetTrigger>
+          </div>
+          <SheetContent className="w-[200px]">
+            <SheetHeader>
+              <SheetTitle className="text-center mb-5">Menu</SheetTitle>
+            </SheetHeader>
+            <ul className="flex flex-col gap-3 justify-center items-center  border-black rounded-3xl px-2">
+              <li>
+                <Link href="/creazioni">
+                  <SheetTrigger>Creazioni</SheetTrigger>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contatti">
+                  <SheetTrigger>Contatti</SheetTrigger>
+                </Link>
+              </li>
+              <li>
+                <Link href="/chi-siamo">
+                  <SheetTrigger>Chi siamo</SheetTrigger>
+                </Link>
+              </li>
+              <li>
+                <button className="bg-primary text-white px-1 ">Ordina</button>
+              </li>
+            </ul>
+          </SheetContent>
+        </Sheet>
+      </div>
+      <ul className="md:visible bg-white flex invisible gap-3 justify-around items-center my-3 border w-72 md:w-96 mx-auto border-black rounded-3xl px-2">
         <li>
           <Link href="/">
             <Image src="/Logo.png" alt="logo" width={60} height={60} />
           </Link>
         </li>
-        <li>Creazioni</li>
-        <li>Contatti</li>
-        <li>Chi siamo</li>
+        <li>
+          <Link href="/creazioni">Creazioni</Link>
+        </li>
+        <li>
+          <Link href="/contatti">Contatti</Link>
+        </li>
+        <li>
+          <Link href="/chi-siamo">Chi siamo</Link>
+        </li>
         <li>
           <button className="bg-primary text-white px-1 ">Ordina</button>
         </li>
