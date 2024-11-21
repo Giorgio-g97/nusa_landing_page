@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Yellowtail } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+
+const yellowtail = Yellowtail({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-primary",
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,10 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${yellowtail.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
