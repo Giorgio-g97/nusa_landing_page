@@ -14,7 +14,8 @@ import { LucideMenu } from "lucide-react";
 const Navbar = () => {
   return (
     <div className="fixed w-full top-0 left-0">
-      <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-72 mx-auto border-black rounded-3xl px-2">
+      {/* MOBILE NAVBAR */}
+      <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-80 h-20 mx-auto border-black rounded-3xl px-2">
         <Sheet>
           <div className="flex justify-between w-full mx-[20px]">
             <Link href="/">
@@ -24,9 +25,9 @@ const Navbar = () => {
               <LucideMenu />
             </SheetTrigger>
           </div>
-          <SheetContent className="w-[200px]">
+          <SheetContent className="w-[200px] text-3xl">
             <SheetHeader>
-              <SheetTitle className="text-center mb-5">Menu</SheetTitle>
+              <SheetTitle className="text-center text-3xl mb-5">Menu</SheetTitle>
             </SheetHeader>
             <ul className="flex flex-col gap-3 justify-center items-center  border-black rounded-3xl px-2">
               <li>
@@ -51,6 +52,8 @@ const Navbar = () => {
           </SheetContent>
         </Sheet>
       </div>
+
+      {/* DESKTOP NAVBAR */}
       <ul className="md:visible bg-white flex invisible gap-3 justify-around items-center my-3 border w-72 md:w-96 mx-auto border-black rounded-3xl px-2">
         <li>
           <Link href="/">
