@@ -16,23 +16,23 @@ const Hero = () => {
         alt="hero-section"
       />
 
-      <div className="mx-auto absolute z-[-8] top-[450px] flex gap-3">
+      <div className="absolute z-[-9] top-[350px] w-full flex gap-20 justify-center">
         <Image
           src="/parallelogramma.svg"
-          width={500}
-          height={500}
+          width={250}
+          height={250}
           alt="parallelogram"
         />
         <Image
           src="/parallelogramma_2.svg"
-          width={500}
-          height={500}
+          width={250}
+          height={250}
           alt="parallelogram"
         />
         <Image
           src="/parallelogramma.svg"
-          width={500}
-          height={500}
+          width={250}
+          height={250}
           alt="parallelogram"
         />
       </div>
