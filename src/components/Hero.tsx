@@ -13,8 +13,8 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="relative w-full bg-black/90 z-[-1] h-[550px]">
-      <h1 className="py-48 text-center text-white text-2xl">
-        Trasformiamo i momenti più preziosi in opere d'arte
+      <h1 className="py-40 text-center text-white text-3xl">
+        Trasformiamo i momenti più preziosi <br/>in opere d'arte
       </h1>
 
       <Image
