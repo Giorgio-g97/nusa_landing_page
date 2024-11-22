@@ -25,11 +25,11 @@ const Navbar = () => {
               <LucideMenu />
             </SheetTrigger>
           </div>
-          <SheetContent className="w-[200px] text-3xl">
+          <SheetContent className="w-[200px] text-2xl">
             <SheetHeader>
               <SheetTitle className="text-center text-3xl mb-5">Menu</SheetTitle>
             </SheetHeader>
-            <ul className="flex flex-col gap-3 justify-center items-center  border-black rounded-3xl px-2">
+            <ul className="flex flex-col gap-5 justify-center items-center  border-black rounded-3xl px-2">
               <li>
                 <Link href="/creazioni">
                   <SheetTrigger>Creazioni</SheetTrigger>
