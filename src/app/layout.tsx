@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Yellowtail } from "next/font/google";
+// import { Yellowtail } from "next/font/google";
+import { Pacifico } from "next/font/google"
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-const yellowtail = Yellowtail({
+// const yellowtail = Yellowtail({
+//   subsets: ["latin"],
+//   weight: ["400"],
+//   variable: "--font-primary",
+// });
+
+const pacifico = Pacifico({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-primary",
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${yellowtail.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pacifico.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         {children}
