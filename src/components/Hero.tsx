@@ -11,7 +11,7 @@ const Hero = () => {
       </h1>
 
       <Image
-        className="absolute top-0 z-[-10] h-[550px] object-fill w-full opacity-70 shadow-2xl"
+        className="absolute top-0 z-[-1] h-[550px] object-fill w-full opacity-70 shadow-2xl"
         src="/hero.jpg"
         width={1000}
         height={1000}
