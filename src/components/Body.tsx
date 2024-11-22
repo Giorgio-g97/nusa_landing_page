@@ -3,7 +3,7 @@ import React from "react";
 
 const Body = () => {
   return (
-    <div className="mt-32">
+    <div className="mt-[550px] md:mt-32">
       {/* CREAZIONI ARTIGIANALI */}
       <div className="grid grid-cols-6">
         <div className="col-span-3">
@@ -39,6 +39,7 @@ const Body = () => {
           del tuo momento speciale. Un tocco personale che trasforma ogni
           oggetto in un pezzo irripetibile.
         </p>
+        
       </div>
     </div>
   );

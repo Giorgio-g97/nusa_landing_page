@@ -27,7 +27,9 @@ const Navbar = () => {
           </div>
           <SheetContent className="w-[200px] text-2xl">
             <SheetHeader>
-              <SheetTitle className="text-center text-3xl mb-5">Menu</SheetTitle>
+              <SheetTitle className="text-center text-3xl mb-5">
+                Menu
+              </SheetTitle>
             </SheetHeader>
             <ul className="flex flex-col gap-5 justify-center items-center  border-black rounded-3xl px-2">
               <li>
@@ -46,7 +48,9 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <button className="bg-primary text-white px-1 ">Ordina</button>
+                <button className="bg-primary text-white px-1 border-2 border-accent">
+                  Ordina
+                </button>
               </li>
             </ul>
           </SheetContent>
@@ -70,7 +74,9 @@ const Navbar = () => {
           <Link href="/chi-siamo">Chi siamo</Link>
         </li>
         <li>
-          <button className="bg-primary text-white px-1 border-2 border-accent">Ordina</button>
+          <button className="bg-primary text-white px-1 border-2 border-accent">
+            Ordina
+          </button>
         </li>
       </ul>
     </div>
