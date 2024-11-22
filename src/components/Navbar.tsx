@@ -70,7 +70,7 @@ const Navbar = () => {
           <Link href="/chi-siamo">Chi siamo</Link>
         </li>
         <li>
-          <button className="bg-primary text-white px-1 ">Ordina</button>
+          <button className="bg-primary text-white px-1 border-2 border-accent">Ordina</button>
         </li>
       </ul>
     </div>
