@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
@@ -38,7 +38,7 @@ const CarouselComp = () => {
   return (
     <>
       <Carousel
-      plugins={[Autoplay({delay: 2000})]}
+        plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
         opts={{
           align: "start",
           loop: true,
