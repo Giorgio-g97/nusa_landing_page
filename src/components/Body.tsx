@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Carousel from "./CarouselComp";
 
 const Body = () => {
   return (
@@ -44,6 +45,7 @@ const Body = () => {
           oggetto in un pezzo irripetibile.
         </p>
       </div>
+      <Carousel />
     </div>
   );
 };
