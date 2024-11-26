@@ -5,6 +5,7 @@ import { Pacifico } from "next/font/google"
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import WhatsappBtn from "@/components/WhatsappBtn";
+import Footer from "@/components/Footer";
 
 // const yellowtail = Yellowtail({
 //   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <WhatsappBtn />
+        <Footer />
       </body>
     </html>
   );

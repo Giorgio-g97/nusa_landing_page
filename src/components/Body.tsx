@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Carousel from "./CarouselComp";
+import Footer from "./Footer";
 
 const Body = () => {
   return (
@@ -77,8 +78,6 @@ const Body = () => {
           alt="spedizioni"
         />
       </div>
-
-      {/* FOOTER */}
     </div>
   );
 };
