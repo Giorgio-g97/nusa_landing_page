@@ -49,14 +49,7 @@ const Body = () => {
 
       {/* SPEDIZIONI */}
       <div className="mt-20 grid md:grid-cols-6">
-        <Image
-          className="col-span-3 border border-black rounded-lg"
-          src="/shipping_01.jpg"
-          width={350}
-          height={350}
-          alt="spedizioni"
-        />
-        <div className="col-span-3">
+        <div className="col-span-3 md:order-2">
           <h2 className="text-center md:text-right text-3xl">
             Dal nostro laboratorio a casa tua
           </h2>
@@ -69,15 +62,23 @@ const Body = () => {
             dal nostro laboratorio.
           </p>
 
-          <button className="float-end text-2xl md:mx-0 p-1 bg-primary text-white border-2 border-accent">
-            Contattaci
-          </button>
+          <div className="flex justify-center my-10">
+            <button className="md:float-end text-2xl md:mx-0 p-1 bg-primary text-white border-2 border-accent">
+              Contattaci
+            </button>
+          </div>
         </div>
+
+        <Image
+          className="mx-auto block col-span-3 border border-black rounded-lg md:order-1"
+          src="/shipping_01.jpg"
+          width={350}
+          height={350}
+          alt="spedizioni"
+        />
       </div>
 
       {/* FOOTER */}
-
-
     </div>
   );
 };

@@ -13,7 +13,7 @@ import { LucideMenu } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full top-0 left-0">
+    <div className="fixed w-full z-[1] top-0 left-0">
       {/* MOBILE NAVBAR */}
       <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-80 h-20 mx-auto border-black rounded-3xl px-2">
         <Sheet>
