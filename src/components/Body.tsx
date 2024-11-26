@@ -26,8 +26,8 @@ const Body = () => {
         <Image
           className="col-span-3 mt-10 md:mt-0"
           src="/hero_remove_bg.png"
-          width={3000}
-          height={3000}
+          width={1280}
+          height={768}
           alt="hero_image"
         />
       </div>
