@@ -12,6 +12,25 @@ import {
 import { LucideMenu } from "lucide-react";
 
 const Navbar = () => {
+  const navlinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Creazioni",
+      path: "/creazioni",
+    },
+    {
+      name: "Contatti",
+      path: "/contatti",
+    },
+    {
+      name: "Chi siamo",
+      path: "/chi-siamo",
+    },
+  ];
+
   return (
     <div className="fixed w-full z-[1] top-0 left-0">
       {/* MOBILE NAVBAR */}
@@ -32,21 +51,13 @@ const Navbar = () => {
               </SheetTitle>
             </SheetHeader>
             <ul className="flex flex-col gap-5 justify-center items-center  border-black rounded-3xl px-2">
-              <li>
-                <Link href="/creazioni">
-                  <SheetTrigger>Creazioni</SheetTrigger>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contatti">
-                  <SheetTrigger>Contatti</SheetTrigger>
-                </Link>
-              </li>
-              <li>
-                <Link href="/chi-siamo">
-                  <SheetTrigger>Chi siamo</SheetTrigger>
-                </Link>
-              </li>
+              {navlinks.map((l) => (
+                <li key={l.path}>
+                  <Link href={l.path}>
+                    <SheetTrigger>{l.name}</SheetTrigger>
+                  </Link>
+                </li>
+              ))}
               <li>
                 <button className="bg-primary text-white px-1 border-2 border-accent">
                   Ordina
@@ -64,15 +75,13 @@ const Navbar = () => {
             <Image src="/Logo.png" alt="logo" width={60} height={60} />
           </Link>
         </li>
-        <li>
-          <Link href="/creazioni">Creazioni</Link>
-        </li>
-        <li>
-          <Link href="/contatti">Contatti</Link>
-        </li>
-        <li>
-          <Link href="/chi-siamo">Chi siamo</Link>
-        </li>
+        {navlinks.map(l => (
+          <li key={l.path}>
+            <Link href={l.path}>
+              {l.name}
+            </Link>
+          </li>
+        ))}
         <li>
           <button className="bg-primary text-white px-1 border-2 border-accent">
             Ordina
