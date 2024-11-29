@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Carousel from "./CarouselComp";
-import Footer from "./Footer";
+import { motion } from "framer-motion";
 
 const Body = () => {
   return (
@@ -24,13 +25,17 @@ const Body = () => {
             Le nostre creazioni
           </button>
         </div>
-        <Image
+        <motion.div
           className="col-span-3 mt-10 md:mt-0"
-          src="/hero_remove_bg.png"
-          width={1280}
-          height={768}
-          alt="hero_image"
-        />
+          whileTap={{ scale: 1.5 }}
+        >
+          <Image
+            src="/hero_remove_bg.png"
+            width={1280}
+            height={768}
+            alt="hero_image"
+          />
+        </motion.div>
       </div>
       {/* PERSONALIZZAZIONI */}
       <div className="mt-20">
