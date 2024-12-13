@@ -2,25 +2,51 @@
 import Image from "next/image";
 import React from "react";
 import Carousel from "./CarouselComp";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const Body = () => {
+  const bodyVariants: Variants = {
+    offscreenTitle: { x: -30, opacity: 0 },
+    onscreenTitle: { x: 0, opacity: 1, transition: { duration: 0.7 } },
+    offscreenHr: { opacity: 0, x: 35 },
+    onscreenHr: { opacity: 1, x: 0, transition: { duration: 0.9 } },
+    offscreenBody: {opacity: 0, x: -15},
+    onscreenBody: {opacity: 1, x: 0, transition: {duration: 0.3}}
+  };
+
   return (
     <div className="mt-[400px] md:mt-32">
       {/* CREAZIONI ARTIGIANALI */}
       <div className="grid md:grid-cols-6">
         <div className="col-span-3 flex flex-col justify-center md:block">
-          <h2 className="text-center md:text-left text-3xl">
+          <motion.h2
+            variants={bodyVariants}
+            initial="offscreenTitle"
+            whileInView="onscreenTitle"
+            viewport={{ once: false, amount: 0.8 }}
+            className="text-center md:text-left text-3xl"
+          >
             L'eccellenza prende forma
-          </h2>
-          <hr className="border-primary mx-auto md:mx-0 border-2 w-32 mt-2" />
-          <p className="text-accent my-10 text-2xl text-center px-10 md:px-0 md:text-left">
+          </motion.h2>
+          <motion.hr
+            variants={bodyVariants}
+            initial="offscreenHr"
+            whileInView="onscreenHr"
+            viewport={{ once: false, amount: 0.8 }}
+            className="border-primary mx-auto md:mx-0 border-2 w-32 mt-2"
+          />
+          <motion.p
+            variants={bodyVariants}
+            initial="offscreenBody"
+            whileInView="onscreenBody"
+            viewport={{once: false, amount: 0.8}}
+          className="text-accent my-10 text-2xl text-center px-10 md:px-0 md:text-left">
             Nel nostro laboratorio, legno pregiato, pelle italiana e metalli
             nobili si trasformano in creazioni uniche. Ogni pezzo nasce dalle
             mani esperte dei nostri artigiani, custodi di un'arte tramandata da
             generazioni. Materiali selezionati e lavorazioni raffinate si
             fondono per dare vita a oggetti che durano nel tempo.
-          </p>
+          </motion.p>
           <button className="mx-auto text-2xl md:mx-0 p-1 bg-primary text-white border-2 border-accent">
             Le nostre creazioni
           </button>
@@ -39,9 +65,14 @@ const Body = () => {
       </div>
       {/* PERSONALIZZAZIONI */}
       <div className="mt-20">
-        <h2 className="text-3xl text-center">
+        <motion.h2
+          variants={bodyVariants}
+          initial="offscreenTitle"
+          whileInView="onscreenTitle"
+          viewport={{once: false}}
+        className="text-3xl text-center">
           Il tuo messaggio, impresso per sempre
-        </h2>
+        </motion.h2>
         <hr className="border-primary border-2 w-48 mx-auto mt-2" />
         <p className="text-accent text-2xl my-10 mx-10 text-center">
           Rendi unica la tua creazione con la nostra incisione a caldo

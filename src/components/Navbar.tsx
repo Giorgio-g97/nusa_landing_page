@@ -45,7 +45,7 @@ const Navbar = () => {
         <Sheet>
           <div className="flex justify-between w-full mx-[20px]">
             <Link href="/">
-              <Image src="/Logo.png" alt="logo" width={60} height={60} />
+              <Image src="/logo.png" alt="logo" width={50} height={50} />
             </Link>
             <SheetTrigger>
               <LucideMenu />
