@@ -1,15 +1,17 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LucideMenu } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const navlinks = [
@@ -32,7 +34,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed w-full z-[1] top-0 left-0">
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed w-full z-[2] top-0 left-0"
+    >
       {/* MOBILE NAVBAR */}
       <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-80 h-20 mx-auto border-black rounded-3xl px-2">
         <Sheet>
@@ -75,11 +82,9 @@ const Navbar = () => {
             <Image src="/Logo.png" alt="logo" width={60} height={60} />
           </Link>
         </li>
-        {navlinks.map(l => (
+        {navlinks.map((l) => (
           <li key={l.path}>
-            <Link href={l.path}>
-              {l.name}
-            </Link>
+            <Link href={l.path}>{l.name}</Link>
           </li>
         ))}
         <li>
@@ -88,7 +93,7 @@ const Navbar = () => {
           </button>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

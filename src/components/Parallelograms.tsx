@@ -7,7 +7,7 @@ const Parallelograms = () => {
   return (
     <div className="absolute top-[300px] md:top-[350px] w-full flex flex-col md:flex-row md:gap-20 items-center justify-center">
       <motion.div
-        initial={{ x: -100, opacity: 0 }}
+        initial={{ x: -30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="relative h-[200px] md:h-[250px] flex justify-center items-center"
@@ -26,7 +26,7 @@ const Parallelograms = () => {
         </div>
       </motion.div>
       <motion.div
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ x: 30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="relative h-[200px] md:h-[250px] flex justify-center items-center"

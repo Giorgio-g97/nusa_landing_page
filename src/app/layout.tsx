@@ -7,12 +7,6 @@ import Navbar from "../components/Navbar";
 import WhatsappBtn from "@/components/WhatsappBtn";
 import Footer from "@/components/Footer";
 
-// const yellowtail = Yellowtail({
-//   subsets: ["latin"],
-//   weight: ["400"],
-//   variable: "--font-primary",
-// });
-
 const pacifico = Pacifico({
   subsets: ["latin"],
   weight: ["400"],
