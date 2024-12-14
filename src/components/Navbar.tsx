@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -76,10 +76,10 @@ const Navbar = () => {
       </div>
 
       {/* DESKTOP NAVBAR */}
-      <ul className="md:visible text-xl bg-white flex invisible gap-3 justify-around items-center my-3 border w-72 md:w-[750px] mx-auto border-black rounded-3xl px-2">
+      <ul className="md:visible text-xl bg-white flex invisible gap-3 justify-around items-center my-3 border w-72 md:w-[750px] mx-auto border-black rounded-3xl p-2">
         <li>
           <Link href="/">
-            <Image src="/Logo.png" alt="logo" width={60} height={60} />
+            <Image src="/logo.png" alt="logo" width={50} height={50} />
           </Link>
         </li>
         {navlinks.map((l) => (
