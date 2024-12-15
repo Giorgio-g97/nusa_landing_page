@@ -41,7 +41,7 @@ const Navbar = () => {
       className="fixed w-full z-[2] top-0 left-0"
     >
       {/* MOBILE NAVBAR */}
-      <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-80 h-20 mx-auto border-black rounded-3xl px-2">
+      <div className="md:hidden bg-white flex gap-3 justify-around items-center my-3 border w-80 h-20 mx-auto border-black rounded-3xl px-2 shadow-2xl">
         <Sheet>
           <div className="flex justify-between w-full mx-[20px]">
             <Link href="/">

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Carousel from "./CarouselComp";
-import { color, motion, Variants } from "framer-motion";
+import HomeCarouselComp from "./HomeCarouselComp";
+import { motion, Variants } from "framer-motion";
 
 const Body = () => {
   const bodyVariants: Variants = {
@@ -100,7 +100,7 @@ const Body = () => {
           oggetto in un pezzo irripetibile.
         </motion.p>
       </div>
-      <Carousel />
+      <HomeCarouselComp />
 
       {/* SPEDIZIONI */}
       <div className="mt-20 grid md:grid-cols-6">

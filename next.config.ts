@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+module.exports = {
+  images: {
+    domains: ['scontent.fbri4-2.fna.fbcdn.net', "scontent.fbri4-1.fna.fbcdn.net"],
+  },
+}
 
-export default nextConfig;

@@ -1,17 +1,14 @@
 "use client";
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-const CarouselComp = () => {
+const HomeCarouselComp = () => {
   const photosCarousel = [
     {
       id: 1,
@@ -68,4 +65,4 @@ const CarouselComp = () => {
   );
 };
 
-export default CarouselComp;
+export default HomeCarouselComp;
