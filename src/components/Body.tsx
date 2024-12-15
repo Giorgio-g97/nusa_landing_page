@@ -9,9 +9,9 @@ const Body = () => {
     offscreenTitle: { x: -30, opacity: 0 },
     onscreenTitle: { x: 0, opacity: 1, transition: { duration: 0.7 } },
     offscreenHr: { opacity: 0, x: 35 },
-    onscreenHr: { opacity: 1, x: 0, transition: { duration: 0.9 } },
-    offscreenBody: { opacity: 0, x: -15 },
-    onscreenBody: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+    onscreenHr: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    offscreenBody: { opacity: 0, x: -20 },
+    onscreenBody: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -147,7 +147,7 @@ const Body = () => {
         </div>
         <div className="w-[350px] h-[350px] overflow-hidden mx-auto block col-span-3 border border-black  rounded-lg md:order-1">
           <motion.div
-            whileHover={{ scale: 1.1, rotate: 2, backgroundColor: "#000000"  }}
+            whileHover={{ scale: 1.1, rotate: 2, backgroundColor: "#000000" }}
             whileTap={{ scale: 1.1 }}
           >
             <Image
