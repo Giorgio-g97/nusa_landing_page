@@ -120,28 +120,33 @@ const Creazioni = () => {
           >
             Matrimoni
           </motion.h2>
-          <Carousel
-            plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full flex px-5 my-10"
-          >
-            <CarouselContent>
-              {weddingPhotos.map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Image
-                    className="border-black border rounded-lg h-[300px]"
-                    src={`${_.url}`}
-                    width={1000}
-                    height={1000}
-                    alt="carousel_image"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Carousel
+              plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full flex px-5 my-10"
+            >
+              <CarouselContent>
+                {weddingPhotos.map((_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
+                    <Image
+                      className="border-black border rounded-lg h-[300px]"
+                      src={`${_.url}`}
+                      width={1000}
+                      height={1000}
+                      alt="carousel_image"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </motion.div>
         </div>
 
         {/* BATTESIMI */}
@@ -155,28 +160,34 @@ const Creazioni = () => {
           >
             Battesimi
           </motion.h2>
-          <Carousel
-            plugins={[Autoplay({ delay: 1750, stopOnInteraction: false })]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full flex px-5 my-10"
-          >
-            <CarouselContent>
-              {battesimiPhotos.map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Image
-                    className="border-black border rounded-lg h-[300px]"
-                    src={`${_.url}`}
-                    width={1000}
-                    height={1000}
-                    alt="carousel_image"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Carousel
+              plugins={[Autoplay({ delay: 1750, stopOnInteraction: false })]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full flex px-5 my-10"
+            >
+              <CarouselContent>
+                {battesimiPhotos.map((_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
+                    <Image
+                      className="border-black border rounded-lg h-[300px]"
+                      src={`${_.url}`}
+                      width={1000}
+                      height={1000}
+                      alt="carousel_image"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </motion.div>
         </div>
 
         {/* ALTRI EVENTI */}
@@ -190,28 +201,34 @@ const Creazioni = () => {
           >
             Altri Eventi
           </motion.h2>
-          <Carousel
-            plugins={[Autoplay({ delay: 1650, stopOnInteraction: false })]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full flex px-5 my-10"
-          >
-            <CarouselContent>
-              {altriEventiPhotos.map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Image
-                    className="border-black border rounded-lg h-[300px]"
-                    src={`${_.url}`}
-                    width={1000}
-                    height={1000}
-                    alt="carousel_image"
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Carousel
+              plugins={[Autoplay({ delay: 1650, stopOnInteraction: false })]}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full flex px-5 my-10"
+            >
+              <CarouselContent>
+                {altriEventiPhotos.map((_, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="md:basis-1/2 lg:basis-1/3"
+                  >
+                    <Image
+                      className="border-black border rounded-lg h-[300px]"
+                      src={`${_.url}`}
+                      width={1000}
+                      height={1000}
+                      alt="carousel_image"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </motion.div>
         </div>
       </div>
     </>
