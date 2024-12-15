@@ -148,7 +148,7 @@ const Body = () => {
         <div className="w-[350px] h-[350px] overflow-hidden mx-auto block col-span-3 border border-black  rounded-lg md:order-1">
           <motion.div
             whileHover={{ scale: 1.1, rotate: 2, backgroundColor: "#000000" }}
-            whileTap={{ scale: 1.1 }}
+            whileTap={{ scale: 1.1, rotate: 2, backgroundColor: "#000000" }}
           >
             <Image
               src="/shipping_01.jpg"
