@@ -8,10 +8,8 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 // Form ShadCN import
@@ -30,7 +28,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "@/lib/schemas";
-import { send } from "@/lib/email";
+import { POST } from "@/lib/email";
 
 const ContactForm = () => {
   // 1. Define your form.
@@ -47,8 +45,7 @@ const ContactForm = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    send(values);
-    console.log(values);
+    POST(values); //Async funct in be (server action)
   }
 
   return (
