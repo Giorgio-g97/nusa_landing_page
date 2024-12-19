@@ -29,15 +29,8 @@ import { useForm } from "react-hook-form";
 // ZOD VALIDATION
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-const formSchema = z.object({
-  userName: z
-    .string()
-    .min(3, { message: "Inserisci almeno 3 lettere" })
-    .max(50),
-  email: z.string().email({ message: "Mail non valida!" }),
-  message: z.string().min(5, { message: "Inserisci almeno 5 caratteri" }),
-});
+import { formSchema } from "@/lib/schemas";
+import { send } from "@/lib/email";
 
 const ContactForm = () => {
   // 1. Define your form.
@@ -54,6 +47,7 @@ const ContactForm = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    send(values);
     console.log(values);
   }
 
