@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import HomeCarouselComp from "./HomeCarouselComp";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const Body = () => {
   const bodyVariants: Variants = {
@@ -53,7 +54,7 @@ const Body = () => {
             whileTap={{ scale: 0.9 }}
             className="mx-auto text-2xl md:mx-0 p-1 bg-primary text-white border-2 border-accent"
           >
-            Le nostre creazioni
+            <Link href="/creazioni">Le nostre creazioni</Link>
           </motion.button>
         </div>
         <motion.div
@@ -141,7 +142,7 @@ const Body = () => {
               whileTap={{ scale: 0.9 }}
               className="md:float-end text-2xl md:mx-0 p-1 bg-primary text-white border-2 border-accent"
             >
-              Contattaci
+              <Link href="contatti">Contattaci</Link>
             </motion.button>
           </div>
         </div>
