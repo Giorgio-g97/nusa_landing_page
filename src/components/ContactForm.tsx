@@ -31,6 +31,11 @@ import { formSchema } from "@/lib/schemas";
 import { POST } from "@/lib/email";
 
 const ContactForm = () => {
+
+  // // TEST
+  // console.log(process.env.RESEND_API_KEY)
+
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
