@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion, Variants } from "framer-motion";
 
 // Form ShadCN import
 import {
@@ -31,11 +32,6 @@ import { formSchema } from "@/lib/schemas";
 import { POST } from "@/lib/email";
 
 const ContactForm = () => {
-
-  // // TEST
-  // console.log(process.env.RESEND_API_KEY)
-
-
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,8 +49,17 @@ const ContactForm = () => {
     POST(values); //Async funct in be (server action)
   }
 
+  const contactVariants: Variants = {
+    initialContact: { y: 50, opacity: 0 },
+    animateContact: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+  };
+
   return (
-    <div>
+    <motion.div
+      variants={contactVariants}
+      initial="initialContact"
+      animate="animateContact"
+    >
       <Card className="w-full max-w-md md:max-w-5xl mx-auto">
         <CardHeader>
           <CardTitle className="text-3xl">Contattaci</CardTitle>
@@ -122,7 +127,7 @@ const ContactForm = () => {
           </Form>
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
