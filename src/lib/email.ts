@@ -10,14 +10,14 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(emailFormData: z.infer<typeof formSchema>) {
   
   try {
-    console.log("Form inviato: ", emailFormData);
     const { error } = await resend.emails.send({
       from: 'NUSA Creazioni <onboarding@resend.dev>',
       to: [emailFormData.email],
       subject: `Ciao ${emailFormData.userName}!`,
       react: EmailTemplate({ userName: emailFormData.userName, email: emailFormData.email, message: emailFormData.message
-        }),
+      }),
     });
+    console.log("Form inviato: ", emailFormData);
   
     if (error) {
       throw error;

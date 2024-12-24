@@ -1,6 +1,15 @@
 "use client";
 
 import React from "react";
+import { motion, Variants } from "framer-motion";
+import { useForm } from "react-hook-form";
+// ZOD VALIDATION
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { formSchema } from "@/lib/schemas";
+import { POST } from "@/lib/email";
+
+// COMPONENTS
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,8 +20,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { motion, Variants } from "framer-motion";
-
 // Form ShadCN import
 import {
   Form,
@@ -22,14 +29,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
-import { useForm } from "react-hook-form";
-
-// ZOD VALIDATION
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { formSchema } from "@/lib/schemas";
-import { POST } from "@/lib/email";
 
 const ContactForm = () => {
   // 1. Define your form.
