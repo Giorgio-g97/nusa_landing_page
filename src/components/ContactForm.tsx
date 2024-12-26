@@ -31,7 +31,7 @@ import {
 } from "@/components/ui/form";
 
 const ContactForm = () => {
-  // 1. Define your form.
+  // 1. Form Schema.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,13 +41,12 @@ const ContactForm = () => {
     },
   });
 
-  // 2. Define a submit handler.
+  // 2. Submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    POST(values); //Async funct in be (server action)
+    POST(values); //Async funct (server action)
   }
 
+  // Framer-motion
   const contactVariants: Variants = {
     initialContact: { y: 50, opacity: 0 },
     animateContact: { y: 0, opacity: 1, transition: { duration: 0.5 } },
@@ -62,7 +61,7 @@ const ContactForm = () => {
       <Card className="w-full max-w-md md:max-w-5xl mx-auto">
         <CardHeader>
           <CardTitle className="text-3xl">Contattaci</CardTitle>
-          <CardDescription className="text-xl">
+          <CardDescription className="text-2xl">
             Compila il form per inviarci un messaggio.
           </CardDescription>
         </CardHeader>
