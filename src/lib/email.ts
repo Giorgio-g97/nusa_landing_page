@@ -17,6 +17,7 @@ export async function POST(emailFormData: z.infer<typeof formSchema>) {
       react: GithubAccessTokenEmail({
         userName: emailFormData.userName,
         email: emailFormData.email,
+        category: emailFormData.category,
         message: emailFormData.message,
       }),
     });

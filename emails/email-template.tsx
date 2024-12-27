@@ -17,18 +17,17 @@ interface GithubAccessTokenEmailProps {
   userName?: string;
   email?: string;
   message?: string;
+  category?: string;
 }
 
 export const GithubAccessTokenEmail = ({
   userName,
   email,
   message,
+  category,
 }: GithubAccessTokenEmailProps) => (
   <Html>
     <Head />
-    <Preview>
-      A fine-grained personal access token has been added to your account
-    </Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
@@ -47,7 +46,10 @@ export const GithubAccessTokenEmail = ({
           <Text style={text}>
             Ciao <strong>{userName}</strong>!
           </Text>
-          <Text style={text}>Ecco il tuo messaggio:</Text>
+          <Text style={text}>
+            Ecco il tuo messaggio in merito all'evento{" "}
+            <strong>{category}</strong>:
+          </Text>
           <Section style={codeContainer}>
             <Heading style={codeStyle}>{message}</Heading>
           </Section>

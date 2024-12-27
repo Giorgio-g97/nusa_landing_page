@@ -9,6 +9,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "@/lib/schemas";
 import { POST } from "@/lib/email";
 
+//Lucide Icons
+import { Check, ChevronsUpDown } from "lucide-react";
+
 // COMPONENTS
 import { Button } from "@/components/ui/button";
 import {
@@ -29,8 +32,20 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import { cn } from "@/lib/utils";
+
 // Toaster
 import { toast } from "sonner";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 const ContactForm = () => {
   // 1. Form Schema.
@@ -39,6 +54,7 @@ const ContactForm = () => {
     defaultValues: {
       userName: "",
       email: "",
+      category: "",
       message: "",
     },
   });
@@ -56,6 +72,13 @@ const ContactForm = () => {
     initialContact: { y: 50, opacity: 0 },
     animateContact: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
+
+  // Categories
+  const categories = [
+    { label: "Matrimonio", value: "Matrimonio" },
+    { label: "Battesimo", value: "Battesimo" },
+    { label: "Altri eventi", value: "Altri eventi" },
+  ] as const;
 
   return (
     <motion.div
@@ -98,6 +121,74 @@ const ContactForm = () => {
                       <FormControl>
                         <Input placeholder="La tua mail" {...field} />
                       </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div>
+                <FormField
+                  control={form.control}
+                  name="category"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col">
+                      <FormLabel>Scegli una categoria</FormLabel>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <FormControl>
+                            <Button
+                              variant="default"
+                              role="combobox"
+                              className={cn(
+                                "w-[200px] justify-between",
+                                !field.value && "text-muted-foreground"
+                              )}
+                            >
+                              {field.value
+                                ? categories.find(
+                                    (c) => c.value === field.value
+                                  )?.label
+                                : "Selezione categoria"}
+                              <ChevronsUpDown className="opacity-50" />
+                            </Button>
+                          </FormControl>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-[200px] p-0">
+                          <Command>
+                            <CommandInput
+                              placeholder="Cerca..."
+                              className="h-9"
+                            />
+                            <CommandList>
+                              <CommandEmpty>
+                                Nessuna categoria trovata.
+                              </CommandEmpty>
+                              <CommandGroup>
+                                {categories.map((c) => (
+                                  <CommandItem
+                                    className="text-primary"
+                                    value={c.label}
+                                    key={c.value}
+                                    onSelect={() => {
+                                      form.setValue("category", c.value);
+                                    }}
+                                  >
+                                    {c.label}
+                                    <Check
+                                      className={cn(
+                                        "ml-auto",
+                                        c.value === field.value
+                                          ? "opacity-100"
+                                          : "opacity-0"
+                                      )}
+                                    />
+                                  </CommandItem>
+                                ))}
+                              </CommandGroup>
+                            </CommandList>
+                          </Command>
+                        </PopoverContent>
+                      </Popover>
                       <FormMessage />
                     </FormItem>
                   )}
