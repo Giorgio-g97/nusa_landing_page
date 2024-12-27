@@ -18,10 +18,6 @@ interface GithubAccessTokenEmailProps {
   message?: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
 export const GithubAccessTokenEmail = ({
   userName,
   email,
@@ -39,6 +35,7 @@ export const GithubAccessTokenEmail = ({
           width="32"
           height="32"
           alt="logo"
+          style={{ borderRadius: "50%" }}
         />
 
         <Text style={title}>
