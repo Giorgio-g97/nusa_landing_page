@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   Head,
+  Heading,
   Html,
   Img,
   Link,
@@ -39,26 +40,29 @@ export const GithubAccessTokenEmail = ({
         />
 
         <Text style={title}>
-          <strong>@{userName}</strong> Benvenuto in Nusa Creazioni!
+          Ciao <strong>{userName}</strong>! Benvenuto in Nusa Creazioni!
         </Text>
 
         <Section style={section}>
           <Text style={text}>
             Ciao <strong>{userName}</strong>!
           </Text>
-          <Text style={text}>
-            Ecco il tuo messaggio: <strong>{message}</strong>
-          </Text>
+          <Text style={text}>Ecco il tuo messaggio:</Text>
+          <Section style={codeContainer}>
+            <Heading style={codeStyle}>{message}</Heading>
+          </Section>
           <Text>Risponderemo il prima possibile</Text>
         </Section>
-        <Text style={links}>
-          <Link style={link}>Your security audit log</Link> ・{" "}
-          <Link style={link}>Contact support</Link>
-        </Text>
-        <Text>A presto!</Text>
+        <Section style={{ textAlign: "center" }}>
+          <Text>A presto!</Text>
+
+          <Link href="/" style={button}>
+            Home page NUSA
+          </Link>
+        </Section>
 
         <Text style={footer}>
-          GitHub, Inc. ・88 Colin P Kelly Jr Street ・San Francisco, CA 94107
+          &copy; NUSA Creazioni, tutti i diritti sono riservati.
         </Text>
       </Container>
     </Body>
@@ -70,6 +74,25 @@ GithubAccessTokenEmail.PreviewProps = {
 } as GithubAccessTokenEmailProps;
 
 export default GithubAccessTokenEmail;
+
+const codeContainer = {
+  background: "rgba(0,0,0,.05)",
+  borderRadius: "4px",
+  margin: "16px auto 14px",
+  verticalAlign: "middle",
+  width: "280px",
+  maxWidth: "100%",
+};
+
+const codeStyle = {
+  color: "#000",
+  display: "inline-block",
+  paddingBottom: "8px",
+  paddingTop: "8px",
+  margin: "0 auto",
+  width: "100%",
+  textAlign: "center" as const,
+};
 
 const main = {
   backgroundColor: "#ffffff",
@@ -102,8 +125,9 @@ const text = {
 };
 
 const button = {
+  width: "120px",
   fontSize: "14px",
-  backgroundColor: "#28a745",
+  backgroundColor: "#814D31",
   color: "#fff",
   lineHeight: 1.5,
   borderRadius: "0.5em",

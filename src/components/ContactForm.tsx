@@ -29,6 +29,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+// Toaster
+import { toast } from "sonner";
 
 const ContactForm = () => {
   // 1. Form Schema.
@@ -42,8 +44,11 @@ const ContactForm = () => {
   });
 
   // 2. Submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    POST(values); //Async funct (server action)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const res = await POST(values); //Async funct (server action)
+    if (res.status === "fulfilled") {
+      toast.success("Messaggio inviato correttamente!");
+    }
   }
 
   // Framer-motion
