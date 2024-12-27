@@ -34,7 +34,12 @@ export const GithubAccessTokenEmail = ({
     </Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src="/logo.png" width="32" height="32" alt="Github" />
+        <Img
+          src="https://scontent.fbri4-1.fna.fbcdn.net/v/t39.30808-6/395450645_707839821377676_8353917185838143491_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=z6tS4jfxb-kQ7kNvgFkdxFG&_nc_zt=23&_nc_ht=scontent.fbri4-1.fna&_nc_gid=A5nR-u4ZIgBtSnrdl2rCXAQ&oh=00_AYByS1B9XwLLXSXBPb8uA7rNwFJY6H4xlqpntfA6vJuVaQ&oe=67744664"
+          width="32"
+          height="32"
+          alt="logo"
+        />
 
         <Text style={title}>
           <strong>@{userName}</strong> Benvenuto in Nusa Creazioni!
