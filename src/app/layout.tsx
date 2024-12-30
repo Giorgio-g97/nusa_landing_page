@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 // import { Yellowtail } from "next/font/google";
-import { Pacifico } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import WhatsappBtn from "@/components/WhatsappBtn";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
-const pacifico = Pacifico({
+const pacifico = Dancing_Script({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-primary",
 });
 

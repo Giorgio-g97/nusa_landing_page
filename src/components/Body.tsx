@@ -16,7 +16,7 @@ const Body = () => {
   };
 
   return (
-    <div className="mt-[400px] md:mt-32">
+    <div className="mt-[120px] md:mt-32">
       {/* CREAZIONI ARTIGIANALI */}
       <div className="grid md:grid-cols-6">
         <div className="col-span-3 flex flex-col justify-center md:block">
