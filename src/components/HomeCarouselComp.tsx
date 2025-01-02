@@ -12,23 +12,23 @@ const HomeCarouselComp = () => {
   const photosCarousel = [
     {
       id: 1,
-      url: "/carousel_01.jpg",
+      url: "/Homepage/carousel_01.jpg",
     },
     {
       id: 2,
-      url: "/carousel_02.jpg",
+      url: "/Homepage/carousel_02.jpg",
     },
     {
       id: 3,
-      url: "/carousel_03.jpg",
+      url: "/Homepage/carousel_03.jpg",
     },
     {
       id: 4,
-      url: "/carousel_04.jpg",
+      url: "/Homepage/carousel_04.jpg",
     },
     {
       id: 5,
-      url: "/carousel_05.jpg",
+      url: "/Homepage/carousel_05.jpg",
     },
   ];
 
