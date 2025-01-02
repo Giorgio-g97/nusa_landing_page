@@ -14,7 +14,7 @@ const Hero = () => {
         className="py-40 text-center text-white text-5xl"
       >
         Trasformiamo i momenti più preziosi <br />
-        in opere d'arte
+        in opere d&apos;arte
       </motion.h1>
 
       <Image

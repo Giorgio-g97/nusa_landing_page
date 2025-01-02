@@ -27,7 +27,7 @@ const Body = () => {
             viewport={{ once: false, amount: 0.8 }}
             className="text-center md:text-left text-3xl"
           >
-            L'eccellenza prende forma
+            L&apos; eccellenza prende forma
           </motion.h2>
           <motion.hr
             variants={bodyVariants}
@@ -45,7 +45,7 @@ const Body = () => {
           >
             Nel nostro laboratorio, legno pregiato, pelle italiana e metalli
             nobili si trasformano in creazioni uniche. Ogni pezzo nasce dalle
-            mani esperte dei nostri artigiani, custodi di un'arte tramandata da
+            mani esperte dei nostri artigiani, custodi di un&apos;arte tramandata da
             generazioni. Materiali selezionati e lavorazioni raffinate si
             fondono per dare vita a oggetti che durano nel tempo.
           </motion.p>
