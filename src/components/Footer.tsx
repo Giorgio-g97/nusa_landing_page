@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center bg-primary w-full">
-        <p className="flex items-center justify-center">
+        <p className="flex text-white items-center justify-center">
           © 2024 - NUSA Creazioni
         </p>
       </div>

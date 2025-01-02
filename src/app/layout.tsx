@@ -64,6 +64,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large", // Preview immagini grandi
     },
   },
+  
   // Icone
   icons: {
     icon: [
