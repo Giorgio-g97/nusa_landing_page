@@ -62,7 +62,7 @@ const Body = () => {
           whileTap={{ scale: 1.5 }}
         >
           <Image
-            src="/hero_remove_bg.png"
+            src="/Homepage/hero_remove_bg.png"
             width={1280}
             height={768}
             alt="hero_image"
@@ -152,7 +152,7 @@ const Body = () => {
             whileTap={{ scale: 1.1, rotate: 2, backgroundColor: "#000000" }}
           >
             <Image
-              src="/shipping_01.jpg"
+              src="/Homepage/shipping_01.jpg"
               width={350}
               height={350}
               alt="spedizioni"

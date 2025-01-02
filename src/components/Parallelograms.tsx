@@ -14,7 +14,7 @@ const Parallelograms = () => {
       >
         <Image
           className="rotate-90 md:rotate-0"
-          src="/parallelogramma.svg"
+          src="/Homepage/parallelogramma.svg"
           width={150}
           height={150}
           alt="parallelogram"
@@ -33,7 +33,7 @@ const Parallelograms = () => {
       >
         <Image
           className="rotate-90 md:rotate-0"
-          src="/parallelogramma_2.svg"
+          src="/Homepage/parallelogramma_2.svg"
           width={150}
           height={150}
           alt="parallelogram"
@@ -51,7 +51,7 @@ const Parallelograms = () => {
       >
         <Image
           className="rotate-90 md:rotate-0"
-          src="/parallelogramma.svg"
+          src="/Homepage/parallelogramma.svg"
           width={150}
           height={150}
           alt="parallelogram"
