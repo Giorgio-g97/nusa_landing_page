@@ -8,6 +8,7 @@ import WhatsappBtn from "@/components/WhatsappBtn";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
+// FONTS
 const pacifico = Dancing_Script({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -25,30 +26,34 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// METADATA
 export const metadata: Metadata = {
-  title: { default: "NUSA Creazioni", template: "%s | NUSA Creazioni" },
+  title: {
+    default: "NUSA Creazioni | Creazioni artigianali in legno",
+    template: "%s | NUSA Creazioni",
+  },
   description:
     "Creazioni uniche in legno massello, realizzate a mano da artigiani italiani. Personalizza il tuo oggetto in base all'evento: dai matrimoni ai battesimi.",
   keywords:
     "artigianato legno, oggetti legno personalizzati, mobili su misura, arredamento legno massello, regali personalizzati legno",
 
-    openGraph: {
-      type: 'website',
-      title: "NUSA Creazioni | Creazioni artigianali in legno",
-      description: "Creazioni uniche in legno massello, realizzate a mano da artigiani italiani. Personalizza il tuo oggetto in base all'evento: dai matrimoni ai battesimi.",
-      url: '/',
-      siteName: "NUSA Creazioni",
-      locale: 'it_IT',
-      images: [
-        {
-          url: '/Homepage/logo.jpg',
-          width: 1200,
-          height: 630,
-          alt: "logo NUSA Creazioni"
-        }
-      ]
-    },
-   
+  openGraph: {
+    type: "website",
+    title: "NUSA Creazioni | Creazioni artigianali in legno",
+    description:
+      "Creazioni uniche in legno massello, realizzate a mano da artigiani italiani. Personalizza il tuo oggetto in base all'evento: dai matrimoni ai battesimi.",
+    url: "/",
+    siteName: "NUSA Creazioni",
+    locale: "it_IT",
+    images: [
+      {
+        url: "/Homepage/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "logo NUSA Creazioni",
+      },
+    ],
+  },
 
   // Istruzioni per i bot dei motori di ricerca
   robots: {
@@ -59,15 +64,15 @@ export const metadata: Metadata = {
       "max-image-preview": "large", // Preview immagini grandi
     },
   },
-// Icone
+  // Icone
   icons: {
-    icon: [  // Favicon standard
-        { url: '/favicon.ico' },
-        { url: '/icon.png', type: 'image/png' }
+    icon: [
+      // Favicon standard
+      { url: "/src/app/favicon.png" },
+      { url: "/src/app/favicon.png", type: "image/png" },
     ],
-    apple: [{ url: '/apple-icon.png' }],  // Per dispositivi Apple
-}
-
+    apple: [{ url: "/Homepage/logo.jpg" }], // Per dispositivi Apple
+  },
 };
 
 export default function RootLayout({
