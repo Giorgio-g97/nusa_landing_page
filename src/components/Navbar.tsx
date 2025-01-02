@@ -96,8 +96,8 @@ const Navbar = () => {
         </li>
         {navlinks.map((l) => (
           <li key={l.path}>
-            <Link className="text-2xl" href={l.path}>
-              {l.name}
+            <Link href={l.path}>
+              <p className="text-2xl  transition-all hover:drop-shadow-[0px_7px_5px_rgba(0,0,0,0.35)]">{l.name}</p>
             </Link>
           </li>
         ))}
