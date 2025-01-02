@@ -47,7 +47,7 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 className="rounded-full"
-                src="/logo.png"
+                src="/Homepage/logo.png"
                 alt="logo"
                 width={50}
                 height={50}
@@ -87,7 +87,7 @@ const Navbar = () => {
           <Link href="/">
             <Image
               className="rounded-full"
-              src="/logo.png"
+              src="/Homepage/logo.png"
               alt="logo"
               width={50}
               height={50}

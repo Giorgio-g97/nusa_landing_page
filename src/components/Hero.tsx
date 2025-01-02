@@ -19,7 +19,7 @@ const Hero = () => {
 
       <Image
         className="absolute top-0 z-[-1] h-[720px] md:h-[550px] object-fill w-full opacity-70 shadow-2xl"
-        src="/hero.jpg"
+        src="/Homepage/hero.jpg"
         width={1000}
         height={1000}
         alt="hero-section"
