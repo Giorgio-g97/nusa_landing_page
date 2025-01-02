@@ -73,6 +73,12 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/Homepage/logo.jpg" }], // Per dispositivi Apple
   },
+
+  // Verifica Google
+  other: {
+    'google-site-verification': 'google88fda829494c6d95',
+  }
+ 
 };
 
 export default function RootLayout({
